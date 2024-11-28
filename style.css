@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', serif;
+    background: url(best-open-ended-questions.webp) no-repeat center center/ cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq{
+    font-size: 40px;
+    width: 50%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+.faq .faq-title{
+    padding: 15px 0;
+    font-size: 1.9rem;
+    text-align: center;
+}
+.faq .q-box .q{
+    position: relative;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-bottom: solid wheat 1px;
+    transition: 0.5s;
+}
+.faq .q-box .q::after{
+    content: '>';
+    position: absolute;
+    right: -5px;
+    transition: 0.5s;
+}
+.faq .q-box .answer{
+    padding-top: 15px;
+    line-height: 1.5;
+    width: 100%;
+    transition: .5s;
+    
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.faq .q-box.active .answer{
+    height: 20rem;
+    opacity: 70;
+}
+
+.faq .q-box.active .q::after{
+   content: '>';
+   transform: rotate(90deg);
+}
+
+.faq .q-box.active .q{
+    font-size: 1.4rem;
+}
